@@ -1,0 +1,90 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "portafolio",
+    "collectionId": "b1866f4c-8bbe-4911-864e-1c251e8b2e9a",
+    "dateExported": "2024-05-14T04:47:48.419Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "91e76855-48e6-4145-a614-84b08caa482a",
+            "name": "Tareas",
+            "containerId": "",
+            "created": "2024-05-13T23:20:41.047Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "a028ca6d-b17d-4926-98f6-6928ffbf5a32",
+            "colId": "b1866f4c-8bbe-4911-864e-1c251e8b2e9a",
+            "containerId": "91e76855-48e6-4145-a614-84b08caa482a",
+            "name": "getTasks",
+            "url": "/task",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-05-13T23:20:49.186Z",
+            "modified": "2024-05-13T23:21:34.987Z",
+            "headers": []
+        },
+        {
+            "_id": "1651ce13-c13a-45d3-98ab-a1d73d0d3fab",
+            "colId": "b1866f4c-8bbe-4911-864e-1c251e8b2e9a",
+            "containerId": "91e76855-48e6-4145-a614-84b08caa482a",
+            "name": "newTask",
+            "url": "/task/create",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-05-13T23:22:28.182Z",
+            "modified": "2024-05-14T04:46:14.204Z",
+            "headers": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "user",
+                        "value": "Joshua Realiquez"
+                    },
+                    {
+                        "name": "course",
+                        "value": "TECNOLOGIA"
+                    },
+                    {
+                        "name": "title",
+                        "value": "PMA Mapa mental"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Se realizó una investigación con Normas APA 7ma edición acerca de Angular, Svelt y React."
+                    },
+                    {
+                        "name": "habilities",
+                        "value": "Normas APA 7 | Word | Investigación | Citación"
+                    },
+                    {
+                        "name": "bimester",
+                        "value": "1"
+                    },
+                    {
+                        "name": "week",
+                        "value": "7"
+                    },
+                    {
+                        "name": "urlTask",
+                        "value": "https://cetkinal-my.sharepoint.com/:b:/g/personal/jrealiquez-2019342_kinal_edu_gt/Ef1tL4qLpoFIonFWGihGQ98B9jHbC0JlivN1VyXUaYSdpQ?e=YexbNA"
+                    },
+                    {
+                        "name": "urlImage",
+                        "value": "https://www.educaciontrespuntocero.com/wp-content/uploads/2022/11/apa.jpg"
+                    }
+                ]
+            }
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "localhost:2657"
+        }
+    },
+    "ref": "5tDGXX3-BJ9reQYgi07zSG9fsu1vzRoU5-42PToCidbfyTzQlz-k3TWa1dUkToe4_0wwTylmTwvHmcc7YtMdrQ"
+}
