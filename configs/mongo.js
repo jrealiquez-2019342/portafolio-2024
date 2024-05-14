@@ -30,9 +30,12 @@ export const connect = async () => {
         })
 
         await mongoose.connect(process.env.URI_MONGO, {
-            serverSelectionTimeoutMS: 500,
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            serverSelectionTimeoutMS: 5000,
             maxPoolSize: 50
         })
+        console.log('MongoDB | connected to database Atlas');
     } catch (err) {
         console.error('Database connection failed. ', err);
     }

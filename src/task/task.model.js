@@ -15,7 +15,8 @@ const taskSchema = Schema({
     },
     title: {
         type: String,
-        required: [true, 'Title is required.']
+        required: [true, 'Title is required.'],
+        unique: [true, 'Title must be unique']
     },
     habilities: {
         type: String,
@@ -26,14 +27,17 @@ const taskSchema = Schema({
         required: [true, 'Description is required']
     },
     bimester:{
-        typeof: Number
+        type: Number
     },
     week:{
-        typeof: Number
+        type: Number
     },
     urlTask:{
         type: String,
         required: [true, 'URL is required']
+    },
+    urlImage: {
+        type: String
     }
 },{
     versionKey: false

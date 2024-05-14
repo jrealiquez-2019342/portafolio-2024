@@ -25,7 +25,7 @@ export const create = async (req, res) => {
 
 export const get = async (req, res) => {
     try {
-        let tasks = await Task.find();
+        let tasks = await Task.find().sort({bimester: 1, week: 1});
         return res.send({ tasks });
     } catch (err) {
         console.error(err);
@@ -79,18 +79,18 @@ export const deleteTask = async (req, res) => {
 
 export const createTask = async () => {
     try {
-        let pivot = Task.findOne({ title: 'Creación de una página web' });
+        let pivot = await Task.findOne({ title: 'Laboratorio #1' });
         if (!pivot) {
-
             console.log('Creando tareas...');
             let tarea = new Task({
                 course: 'TALLER',
-                title: 'Creación de una página web',
+                title: 'Laboratorio #1',
                 habilities: 'Organización | HTML | CSS',
                 description: 'Se crearon tres páginas para aprender HTML y css. La primera trata de las cosas que me gustan; la segunda muestra mi biografía; la tercera muestra una mejora en la página de kinal.academy',
                 bimester: 1,
                 week: 2,
-                urlTask: 'https://cetkinal-my.sharepoint.com/:u:/g/personal/jrealiquez-2019342_kinal_edu_gt/EdJZvd7pHT5ItKymYtQ3t3kBOkFE1glpdmcNw5XJI5hqMg?e=nhBjp5'
+                urlTask: 'https://cetkinal-my.sharepoint.com/:u:/g/personal/jrealiquez-2019342_kinal_edu_gt/EdJZvd7pHT5ItKymYtQ3t3kBOkFE1glpdmcNw5XJI5hqMg?e=nhBjp5',
+                urlImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMb-wN8vWbzOGK0k3ptZZi3WE8Qek7xi7quO-3VqCAMQ&s'
             });
             await tarea.save();
             return console.log('Tarea creada correctamente');
